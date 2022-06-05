@@ -167,7 +167,6 @@
 				2B6D4C671C720AD41588577D /* Pods-ContactManagerTests.debug.xcconfig */,
 				C93DA06AE0DA7B9F8215F793 /* Pods-ContactManagerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -647,7 +646,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B6D4C671C720AD41588577D /* Pods-ContactManagerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -668,7 +667,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C93DA06AE0DA7B9F8215F793 /* Pods-ContactManagerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -689,7 +688,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8A181626E732FA77B1BE3DC /* Pods-ContactManager-ContactManagerUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YZM74H87KK;
@@ -708,7 +707,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A719FE0C1A9730A9D8DB001 /* Pods-ContactManager-ContactManagerUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YZM74H87KK;
