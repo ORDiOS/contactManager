@@ -37,22 +37,25 @@ class DataBaseManager {
     }
     
     func save(contacts: [Contact]) {
-        queue.async { [weak self] in
             var realmContacts = [RealmContact]()
             contacts.forEach { realmContacts.append(RealmContact(with: $0)) }
             do {
-                try self?.realm?.write {
-                    self?.realm?.add(realmContacts)
+                try realm?.write {
+                    realm?.add(realmContacts)
                 }
             } catch {
                 assertionFailure()
                 let msg = error.localizedDescription
                 print(msg)
             }
-        }
     }
     
     func getContacts() -> Results<RealmContact> {
         return (self.realm?.objects(RealmContact.self))!
     }
+    
+    func dataBaseIsEmpty() -> Bool{
+        return DataBaseManager.shared.getContacts().isEmpty ? true: false
+        }
+        
 }

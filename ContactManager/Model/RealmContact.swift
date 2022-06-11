@@ -30,15 +30,3 @@ class RealmContact: Object {
         }
 }
 
-class Store: Object {
-    @objc dynamic var name = ""
-    var contactList = List<RealmContact>()
-    
-    static func create(withName name: String, contacts: [RealmContact]) -> Store {
-        let store = Store()
-        store.name = name
-        store.contactList.append(objectsIn: contacts)
-        
-        return store
-    }
-}

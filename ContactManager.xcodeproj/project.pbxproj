@@ -11,6 +11,7 @@
 		73149D1F284ED2430092BE72 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73149D1E284ED2430092BE72 /* DataBaseManager.swift */; };
 		73149D20284ED2730092BE72 /* RealmContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73149D1A284ED1220092BE72 /* RealmContact.swift */; };
 		73149D23284ED3F70092BE72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73149D22284ED3F60092BE72 /* Constants.swift */; };
+		7339BE112854E3190011E551 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7339BE102854E3180011E551 /* Networking.swift */; };
 		73AD9C87284BDAE600F547CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9C86284BDAE600F547CD /* AppDelegate.swift */; };
 		73AD9C89284BDAE600F547CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9C88284BDAE600F547CD /* SceneDelegate.swift */; };
 		73AD9C8B284BDAE600F547CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD9C8A284BDAE600F547CD /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		73149D1B284ED1D60092BE72 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		73149D1E284ED2430092BE72 /* DataBaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		73149D22284ED3F60092BE72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7339BE102854E3180011E551 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		73AD9C83284BDAE600F547CD /* ContactManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AD9C86284BDAE600F547CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73AD9C88284BDAE600F547CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		7339BE0F2854E2C90011E551 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7339BE102854E3180011E551 /* Networking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		73AD9C7A284BDAE600F547CD = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 				73149D18284ED0AD0092BE72 /* Model */,
 				73149D17284ED0A50092BE72 /* View */,
 				73149D16284ED08D0092BE72 /* Controller */,
+				7339BE0F2854E2C90011E551 /* Networking */,
 				73149D1D284ED2270092BE72 /* Manager */,
 				73149D15284ED0550092BE72 /* Standart */,
 				73AD9C97284BDAE700F547CD /* Info.plist */,
@@ -480,6 +491,7 @@
 				73AD9C8B284BDAE600F547CD /* ViewController.swift in Sources */,
 				73AD9C87284BDAE600F547CD /* AppDelegate.swift in Sources */,
 				73149D20284ED2730092BE72 /* RealmContact.swift in Sources */,
+				7339BE112854E3190011E551 /* Networking.swift in Sources */,
 				73149D1C284ED1D60092BE72 /* Contact.swift in Sources */,
 				73AD9C91284BDAE600F547CD /* ContactManager.xcdatamodeld in Sources */,
 				73149D1F284ED2430092BE72 /* DataBaseManager.swift in Sources */,

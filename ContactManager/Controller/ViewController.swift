@@ -10,37 +10,64 @@ import RealmSwift
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var tableActivityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var contactsTableView: UITableView!
     private var names = [String]()
     private var sectionTitle = [String]()
     private var namesDict = [String: [String]]()
     
+    private let jsonParser = JSONParser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
-        prepareDataForTableView()
-        setSectionTitle()
+        tableActivityIndicator.isHidden = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+  
+        // check data in RealDB
+        if DataBaseManager.shared.dataBaseIsEmpty() {
+            loadData()
+           
+        } else {
+            prepareDataForTableView()
+            setSectionTitle()
+            contactsTableView.reloadData()
+        }
     }
 }
+
+
 extension ViewController {
+    
     func loadData() {
-        let url = URL(string: Constants.apiUrl)!
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                DispatchQueue.main.async {
-                    do {
-                        let listOf = try JSONDecoder().decode(ListofContacts.self, from: data)
-                        DataBaseManager.shared.save(contacts: listOf.contacts)
-                    }
-                    catch let error {print (error)}
+        tableActivityIndicator.isHidden = false
+        tableActivityIndicator.startAnimating()
+        guard let url = URL(string: Constants.apiUrl) else { return }
+        
+        jsonParser.downloadData(of: ListofContacts.self, from: url) { (result) in
+            switch result {
+            case .failure(let error):
+                if error is DataError {
+                    print("DataError = \(error)")
+                } else {
+                    print(error.localizedDescription)
                 }
-                
-            } else if let error = error {
-                print("HTTP Request Failed: \(error)")
+            case .success(let jsonResult):
+                DispatchQueue.main.async {
+                    print(jsonResult)
+                    DataBaseManager.shared.save(contacts: jsonResult.contacts)
+                    self.prepareDataForTableView()
+                    self.setSectionTitle()
+                    self.contactsTableView.reloadData()
+                    
+                    self.tableActivityIndicator.isHidden = true
+                    self.tableActivityIndicator.stopAnimating()
+                }
             }
         }
-        
-        task.resume()
     }
     
     func prepareDataForTableView() {
