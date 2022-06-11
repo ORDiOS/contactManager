@@ -9,6 +9,5 @@ brew install cocoapods
  pod install
 3. Launch the application via the file ContactManager.xcworkspace
 
-The peculiarity of the application after the first start-up downloads and saves the data
-The data will be displayed after the next restart of the application
+
 
