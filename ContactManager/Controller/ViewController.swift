@@ -10,7 +10,6 @@ import RealmSwift
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var tableActivityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var contactsTableView: UITableView!
@@ -39,9 +38,7 @@ class ViewController: UIViewController {
     }
 }
 
-
 extension ViewController {
-    
     func loadData() {
         tableActivityIndicator.isHidden = false
         tableActivityIndicator.startAnimating()
@@ -96,7 +93,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = namesDict[sectionTitle[indexPath.section]]?[indexPath.row]
         return cell
     }

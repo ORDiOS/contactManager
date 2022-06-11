@@ -17,9 +17,9 @@ enum DataError: Error {
 }
 
 class JSONParser {
-    typealias result<T> = (Result<T, Error>) -> Void
+    typealias ResultParse<T> = (Result<T, Error>) -> Void
     
-    func downloadData<T: Decodable>(of type: T.Type, from url: URL, completion: @escaping result<T>) {
+    func downloadData<T: Decodable>(of type: T.Type, from url: URL, completion: @escaping ResultParse<T>) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))

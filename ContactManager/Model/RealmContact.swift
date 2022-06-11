@@ -29,4 +29,3 @@ class RealmContact: Object {
             fatalError(msg)
         }
 }
-

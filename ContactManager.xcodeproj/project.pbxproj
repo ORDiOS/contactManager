@@ -261,6 +261,7 @@
 				73AD9C80284BDAE600F547CD /* Frameworks */,
 				73AD9C81284BDAE600F547CD /* Resources */,
 				56D192B428EACF397C5AD844 /* [CP] Embed Pods Frameworks */,
+				73C5FB3128553201003459BD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -463,6 +464,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ContactManager/Pods-ContactManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		73C5FB3128553201003459BD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		E7565A0D1752AAFD5D883AFA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

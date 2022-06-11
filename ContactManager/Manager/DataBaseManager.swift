@@ -54,7 +54,7 @@ class DataBaseManager {
         return (self.realm?.objects(RealmContact.self))!
     }
     
-    func dataBaseIsEmpty() -> Bool{
+    func dataBaseIsEmpty() -> Bool {
         return DataBaseManager.shared.getContacts().isEmpty ? true: false
         }
         

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListofContacts: Codable  {
+struct ListofContacts: Codable {
     let contacts: [Contact]
 }
 
